@@ -1,0 +1,34 @@
+2024-01-16 09:15:22 INFO Application startup initiated
+2024-01-16 09:15:23 INFO Loading configuration from /etc/app/config.yaml
+2024-01-16 09:15:24 INFO Connecting to Redis cache at redis.internal:6379
+2024-01-16 09:15:25 ERROR Redis connection refused - Host: redis.internal:6379
+2024-01-16 09:15:26 WARN Application starting without cache - Performance may be degraded
+2024-01-16 09:15:27 INFO HTTP server started on port 8080
+2024-01-16 09:17:35 INFO Incoming request - Method: GET, Path: /api/products/list
+2024-01-16 09:17:35 ERROR Redis connection refused - Host: redis.internal:6379
+2024-01-16 09:17:36 INFO Query executed successfully - Duration: 45ms
+2024-01-16 09:18:42 INFO User registration request - Email: john.doe@example.com
+2024-01-16 09:18:43 ERROR Email validation failed - Invalid domain: example.co
+2024-01-16 09:19:15 INFO Processing order - OrderID: ORD-2024-156
+2024-01-16 09:19:15 ERROR Redis connection refused - Host: redis.internal:6379
+2024-01-16 09:19:16 ERROR Payment gateway unreachable - Endpoint: https://pay.stripe.com/v1/charges
+2024-01-16 09:19:17 ERROR Order processing failed - OrderID: ORD-2024-156, Reason: Payment timeout
+2024-01-16 09:20:30 INFO Background job started - Job: inventory_sync
+2024-01-16 09:20:45 WARN Slow query detected - Duration: 3200ms, Table: products
+2024-01-16 09:20:55 ERROR Redis connection refused - Host: redis.internal:6379
+2024-01-16 09:21:18 INFO API key validated - ClientID: client_abc123
+2024-01-16 09:22:05 ERROR Disk write failed - Path: /var/data/uploads/document.pdf, Error: No space left on device
+2024-01-16 09:22:50 INFO Session created - SessionID: sess_xyz789, UserID: user_54321
+2024-01-16 09:23:12 ERROR Maximum connection pool size reached - Current: 100, Max: 100
+2024-01-16 09:23:13 WARN Queuing incoming requests - Pool exhausted
+2024-01-16 09:24:38 INFO Cache miss - Key: product_details_9876
+2024-01-16 09:25:10 ERROR JSON parsing error - Line: 42, Column: 15, Message: Unexpected token
+2024-01-16 09:26:22 INFO Webhook received - Source: github.com, Event: push
+2024-01-16 09:27:45 ERROR Image processing failed - File: photo.jpg, Reason: Unsupported format
+2024-01-16 09:28:30 INFO Metrics exported - Endpoint: /metrics, Duration: 12ms
+2024-01-16 09:29:18 WARN SSL certificate expires in 7 days - Domain: api.example.com
+2024-01-16 09:30:55 INFO Scheduled task completed - Task: cleanup_old_sessions, Removed: 234 items
+2024-01-16 09:31:42 ERROR Database query timeout - Query: SELECT * FROM orders WHERE created_at > ?, Timeout: 5000ms
+2024-01-16 09:32:20 INFO Request completed - Status: 200, Duration: 156ms
+2024-01-16 09:33:15 ERROR External API rate limit exceeded - API: maps.googleapis.com, Retry-After: 3600s
+2024-01-16 09:34:08 INFO User logout - UserID: user_54321, SessionDuration: 11m
