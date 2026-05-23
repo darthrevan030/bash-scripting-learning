@@ -8,36 +8,36 @@ find . -name "*.txt" -mtime -1
 
 echo "Analyzing app logs:"
 echo "-------------------"
-echo "number of errors in app_2026-01.txt:"
-grep -c "ERROR" ./logs/app_2026-01.txt
-echo "number of warnings in app_2026-01.txt:"
-grep -c "WARN" ./logs/app_2026-01.txt
-echo "error lines in app_2026-01.txt:"
-grep "ERROR" ./logs/app_2026-01.txt
-echo "warning lines in app_2026-01.txt:"
-grep "WARN" ./logs/app_2026-01.txt
+echo -e "\nnumber of errors in app.txt:"
+grep -c "ERROR" ./logs/app.txt
+echo -e "\nnumber of warnings in app.txt:"
+grep -c "WARN" ./logs/app.txt
+echo -e "\nerror lines in app.txt:"
+grep "ERROR" ./logs/app.txt
+echo -e "\nwarning lines in app.txt:"
+grep "WARN" ./logs/app.txt
 
 echo "Analyzing db logs:"
 echo "-------------------"
-echo "number of errors in db_2026-01.txt:"
-grep -c "ERROR" ./logs/db_2026-01.txt
-echo "number of warnings in db_2026-01.txt:"
-grep -c "WARN" ./logs/db_2026-01.txt
-echo "error lines in db_2026-01.txt:"
-grep "ERROR" ./logs/db_2026-01.txt
-echo "warning lines in db_2026-01.txt:"
-grep "WARN" ./logs/db_2026-01.txt
+echo -e "\nnumber of errors in db.txt:"
+grep -c "ERROR" ./logs/db.txt
+echo -e "\nnumber of warnings in db.txt:"
+grep -c "WARN" ./logs/db.txt
+echo -e "\nerror lines in db.txt:"
+grep "ERROR" ./logs/db.txt
+echo -e "\nwarning lines in db.txt:"
+grep "WARN" ./logs/db.txt
 
 echo "Analyzing redis logs:"
 echo "-------------------"
-echo "number of errors in redis_2026-02.txt:"
-grep -c "ERROR" ./logs/redis_2026-02.txt
-echo "number of warnings in redis_2026-02.txt:"
-grep -c "WARN" ./logs/redis_2026-02.txt
-echo "error lines in redis_2026-02.txt:"
-grep "ERROR" ./logs/redis_2026-02.txt
-echo "warning lines in redis_2026-02.txt:"
-grep "WARN" ./logs/redis_2026-02.txt
+echo -e "\nnumber of errors in redis.txt:"
+grep -c "ERROR" ./logs/redis.txt
+echo -e "\nnumber of warnings in redis.txt:"
+grep -c "WARN" ./logs/redis.txt
+echo -e "\nerror lines in redis.txt:"
+grep "ERROR" ./logs/redis.txt
+echo -e "\nwarning lines in redis.txt:"
+grep "WARN" ./logs/redis.txt
 
 
 
