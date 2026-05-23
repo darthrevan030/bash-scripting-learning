@@ -1,0 +1,99 @@
+2024-01-15 08:23:14 INFO Application started successfully
+2024-01-15 08:23:15 INFO Database connection pool initialized with 10 connections
+2024-01-15 08:23:16 INFO Server listening on port 3000
+2024-01-15 08:25:42 INFO User login successful - UserID: user_12345, IP: 192.168.1.100
+2024-01-15 08:26:18 INFO Processing payment request - OrderID: ORD-2024-001
+2024-01-15 08:26:19 ERROR Database connection failed - Timeout after 30 seconds
+2024-01-15 08:26:20 WARN Retrying database connection - Attempt 1 of 3
+2024-01-15 08:26:25 ERROR Database connection failed - Timeout after 30 seconds
+2024-01-15 08:26:26 WARN Retrying database connection - Attempt 2 of 3
+2024-01-15 08:26:31 INFO Database connection restored successfully
+2024-01-15 08:26:32 INFO Payment processed successfully - OrderID: ORD-2024-001
+2024-01-15 08:28:45 INFO API request received - Endpoint: /api/users/search
+2024-01-15 08:28:46 ERROR Authentication token expired - UserID: user_67890
+2024-01-15 08:29:12 INFO User login successful - UserID: user_67890, IP: 10.0.2.45
+2024-01-15 08:30:55 INFO Cache hit - Key: user_profile_12345
+2024-01-15 08:31:22 ERROR File not found - Path: /uploads/image_2024.png
+2024-01-15 08:32:10 INFO Backup process started
+2024-01-15 08:32:45 WARN Low disk space - Only 5% remaining on /var/logs
+2024-01-15 08:33:18 INFO User logout - UserID: user_12345
+2024-01-15 08:35:42 ERROR Network timeout - External API: https://payment-gateway.example.com
+2024-01-15 08:35:43 ERROR Payment processing failed - OrderID: ORD-2024-002
+2024-01-15 08:36:10 INFO Sending notification email to admin@example.com
+2024-01-15 08:37:25 INFO Scheduled job completed - Task: daily_reports
+2024-01-15 08:38:50 ERROR Permission denied - User: user_99999 attempted to access /admin/settings
+2024-01-15 08:40:15 INFO Memory usage: 1.2GB / 4GB (30%)
+2024-01-15 08:41:30 INFO CPU usage: 45%
+2024-01-15 08:42:18 ERROR Database connection failed - Timeout after 30 seconds
+2024-01-15 08:43:05 INFO Application health check passed
+2024-01-15 08:45:22 WARN Rate limit exceeded - IP: 203.45.67.89, Endpoint: /api/search
+2024-01-15 08:46:40 INFO Session cleanup completed - Removed 127 expired sessions
+2024-01-15 08:48:15 ERROR Invalid JSON payload received - Endpoint: /api/orders/create
+2024-01-16 09:15:22 INFO Application startup initiated
+2024-01-16 09:15:23 INFO Loading configuration from /etc/app/config.yaml
+2024-01-16 09:15:24 INFO Connecting to Redis cache at redis.internal:6379
+2024-01-16 09:15:25 ERROR Redis connection refused - Host: redis.internal:6379
+2024-01-16 09:15:26 WARN Application starting without cache - Performance may be degraded
+2024-01-16 09:15:27 INFO HTTP server started on port 8080
+2024-01-16 09:17:35 INFO Incoming request - Method: GET, Path: /api/products/list
+2024-01-16 09:17:35 ERROR Redis connection refused - Host: redis.internal:6379
+2024-01-16 09:17:36 INFO Query executed successfully - Duration: 45ms
+2024-01-16 09:18:42 INFO User registration request - Email: john.doe@example.com
+2024-01-16 09:18:43 ERROR Email validation failed - Invalid domain: example.co
+2024-01-16 09:19:15 INFO Processing order - OrderID: ORD-2024-156
+2024-01-16 09:19:15 ERROR Redis connection refused - Host: redis.internal:6379
+2024-01-16 09:19:16 ERROR Payment gateway unreachable - Endpoint: https://pay.stripe.com/v1/charges
+2024-01-16 09:19:17 ERROR Order processing failed - OrderID: ORD-2024-156, Reason: Payment timeout
+2024-01-16 09:20:30 INFO Background job started - Job: inventory_sync
+2024-01-16 09:20:45 WARN Slow query detected - Duration: 3200ms, Table: products
+2024-01-16 09:20:55 ERROR Redis connection refused - Host: redis.internal:6379
+2024-01-16 09:21:18 INFO API key validated - ClientID: client_abc123
+2024-01-16 09:22:05 ERROR Disk write failed - Path: /var/data/uploads/document.pdf, Error: No space left on device
+2024-01-16 09:22:50 INFO Session created - SessionID: sess_xyz789, UserID: user_54321
+2024-01-16 09:23:12 ERROR Maximum connection pool size reached - Current: 100, Max: 100
+2024-01-16 09:23:13 WARN Queuing incoming requests - Pool exhausted
+2024-01-16 09:24:38 INFO Cache miss - Key: product_details_9876
+2024-01-16 09:25:10 ERROR JSON parsing error - Line: 42, Column: 15, Message: Unexpected token
+2024-01-16 09:26:22 INFO Webhook received - Source: github.com, Event: push
+2024-01-16 09:27:45 ERROR Image processing failed - File: photo.jpg, Reason: Unsupported format
+2024-01-16 09:28:30 INFO Metrics exported - Endpoint: /metrics, Duration: 12ms
+2024-01-16 09:29:18 WARN SSL certificate expires in 7 days - Domain: api.example.com
+2024-01-16 09:30:55 INFO Scheduled task completed - Task: cleanup_old_sessions, Removed: 234 items
+2024-01-16 09:31:42 ERROR Database query timeout - Query: SELECT * FROM orders WHERE created_at > ?, Timeout: 5000ms
+2024-01-16 09:32:20 INFO Request completed - Status: 200, Duration: 156ms
+2024-01-16 09:33:15 ERROR External API rate limit exceeded - API: maps.googleapis.com, Retry-After: 3600s
+2024-01-16 09:34:08 INFO User logout - UserID: user_54321, SessionDuration: 11m
+2024-01-17 10:05:18 INFO Service initialization complete
+2024-01-17 10:05:19 INFO Kubernetes health probe - Status: healthy
+2024-01-17 10:05:20 INFO Connecting to MongoDB cluster at mongodb.prod.svc:27017
+2024-01-17 10:05:25 ERROR MongoDB authentication failed - Username: app_user, Database: production
+2024-01-17 10:05:26 WARN Falling back to read-only mode
+2024-01-17 10:05:27 INFO Service running in degraded mode - Write operations disabled
+2024-01-17 10:07:42 INFO Request received - Endpoint: /api/v2/bookings, Method: POST
+2024-01-17 10:07:43 ERROR Service unavailable - Write operations not permitted in read-only mode
+2024-01-17 10:08:15 INFO Background sync started - Source: external_calendar_api
+2024-01-17 10:08:16 ERROR HTTP 503 Service Unavailable - URL: https://calendar.external.com/api/events
+2024-01-17 10:08:17 WARN Sync job will retry in 5 minutes
+2024-01-17 10:09:30 INFO Processing webhook - Provider: stripe, Event: payment.succeeded
+2024-01-17 10:09:31 INFO Database read successful - Collection: transactions, Duration: 89ms
+2024-01-17 10:10:44 ERROR XML parsing failed - Document: booking_confirmation.xml, Line: 156
+2024-01-17 10:10:47 ERROR HTTP 503 Service Unavailable - URL: https://calendar.external.com/api/events
+2024-01-17 10:11:22 INFO Memory check - Used: 2.8GB, Available: 1.2GB, Total: 4GB
+2024-01-17 10:11:23 WARN High memory usage detected - Threshold exceeded: 70%
+2024-01-17 10:12:18 INFO Incoming gRPC call - Service: BookingService, Method: CreateReservation
+2024-01-17 10:12:19 ERROR gRPC deadline exceeded - Timeout: 2000ms, Actual: 2134ms
+2024-01-17 10:13:02 ERROR HTTP 503 Service Unavailable - URL: https://calendar.external.com/api/events
+2024-01-17 10:13:05 INFO Session validation - SessionID: sess_abc456, Status: valid
+2024-01-17 10:14:30 ERROR Certificate verification failed - Host: api.partner.com, Error: certificate has expired
+2024-01-17 10:15:12 INFO Metrics collection - CPU: 68%, Memory: 72%, Disk I/O: 245 MB/s
+2024-01-17 10:16:48 ERROR Kafka producer error - Topic: booking-events, Partition: 3, Error: broker not available
+2024-01-17 10:16:49 WARN Message buffered for retry - Buffer size: 1250 messages
+2024-01-17 10:17:25 INFO Image upload request - Filename: hotel_room_205.jpg, Size: 4.2MB
+2024-01-17 10:17:26 ERROR File size exceeds limit - Max allowed: 2MB, Received: 4.2MB
+2024-01-17 10:18:40 INFO Cron job triggered - Task: send_reminder_emails
+2024-01-17 10:18:55 ERROR SMTP server connection failed - Host: smtp.mailserver.com:587, Error: connection timed out
+2024-01-17 10:19:20 WARN Email queue growing - Current size: 1847 pending emails
+2024-01-17 10:20:15 INFO API request throttled - Client: mobile_app_v2.1, Rate: 1500 req/min, Limit: 1000 req/min
+2024-01-17 10:21:33 ERROR S3 upload failed - Bucket: app-backups, Key: backup_20240117.tar.gz, Error: access denied
+2024-01-17 10:22:10 INFO Cache refresh completed - Keys updated: 342, Duration: 1.8s
+2024-01-17 10:23:45 ERROR Dependency service timeout - Service: user-authentication-service, Timeout after: 3000ms
