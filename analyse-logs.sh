@@ -17,24 +17,6 @@ grep "ERROR" ./logs/app_2026-01.txt
 echo "warning lines in app_2026-01.txt:"
 grep "WARN" ./logs/app_2026-01.txt
 
-echo "number of errors in app_2026-02.txt:"
-grep -c "ERROR" ./logs/app_2026-02.txt
-echo "number of warnings in app_2026-02.txt:"
-grep -c "WARN" ./logs/app_2026-02.txt
-echo "error lines in app_2026-02.txt:"
-grep "ERROR" ./logs/app_2026-02.txt
-echo "warning lines in app_2026-02.txt:"
-grep "WARN" ./logs/app_2026-02.txt
-
-echo "number of errors in app_2026-03.txt:"
-grep -c "ERROR" ./logs/app_2026-03.txt
-echo "number of warnings in app_2026-03.txt:"
-grep -c "WARN" ./logs/app_2026-03.txt
-echo "error lines in app_2026-03.txt:"
-grep "ERROR" ./logs/app_2026-03.txt
-echo "warning lines in app_2026-03.txt:"
-grep "WARN" ./logs/app_2026-03.txt
-
 echo "Analyzing db logs:"
 echo "-------------------"
 echo "number of errors in db_2026-01.txt:"
