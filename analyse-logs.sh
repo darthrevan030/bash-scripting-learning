@@ -5,6 +5,8 @@ APP_LOG="app.txt"
 DB_LOG="db.txt"
 REDIS_LOG="redis.txt"
 
+ERROR_PATTERN=("ERROR" "WARN" "INFO")
+
 echo "analysing log files for errors and warnings"
 echo "---------------------------------------------"
 
@@ -13,39 +15,38 @@ find "${LOG_DIR}" -name "*.txt" -mtime -1
 
 echo -e "\nAnalyzing app logs:"
 echo "-------------------"
-echo "$(tput setaf 1)number of errors in app.txt:"
-grep -c "ERROR" "${LOG_DIR}/${APP_LOG}"
+echo "$(tput setaf 1)number of ${ERROR_PATTERN[0]} in app.txt:"
+grep -c "${ERROR_PATTERN[0]}" "${LOG_DIR}/${APP_LOG}"
 echo "error lines in app.txt:"
-grep "ERROR" "${LOG_DIR}/${APP_LOG}"
+grep "${ERROR_PATTERN[0]}" "${LOG_DIR}/${APP_LOG}"
 
-echo -e "\n$(tput setaf 3)number of warnings in app.txt:"
-grep -c "WARN" "${LOG_DIR}/${APP_LOG}"
+echo -e "\n$(tput setaf 3)number of ${ERROR_PATTERN[1]} in app.txt:"
+grep -c "${ERROR_PATTERN[1]}" "${LOG_DIR}/${APP_LOG}"
 echo "warning lines in app.txt:"
-grep "WARN" "${LOG_DIR}/${APP_LOG}"
+grep "${ERROR_PATTERN[1]}" "${LOG_DIR}/${APP_LOG}"
 
 echo -e "$(tput setaf 7)\nAnalyzing db logs:"
 echo "-------------------"
-echo "$(tput setaf 1)number of errors in db.txt:"
-grep -c "ERROR" "${LOG_DIR}/${DB_LOG}"
+echo "$(tput setaf 1)number of ${ERROR_PATTERN[0]} in db.txt:"
+grep -c "${ERROR_PATTERN[0]}" "${LOG_DIR}/${DB_LOG}"
 echo "error lines in db.txt:"
-grep "ERROR" "${LOG_DIR}/${DB_LOG}"
+grep "${ERROR_PATTERN[0]}" "${LOG_DIR}/${DB_LOG}"
 
-echo -e "\n$(tput setaf 3)number of warnings in db.txt:"
-grep -c "WARN" "${LOG_DIR}/${DB_LOG}"
+echo -e "\n$(tput setaf 3)number of ${ERROR_PATTERN[1]} in db.txt:"
+grep -c "${ERROR_PATTERN[1]}" "${LOG_DIR}/${DB_LOG}"
 echo "warning lines in db.txt:"
-grep "WARN" "${LOG_DIR}/${DB_LOG}"
+grep "${ERROR_PATTERN[1]}" "${LOG_DIR}/${DB_LOG}"
 
 echo -e "$(tput setaf 7)\nAnalyzing redis logs:"
 echo "-------------------"
-echo "$(tput setaf 1)number of errors in redis.txt:"
-grep -c "ERROR" "${LOG_DIR}/${REDIS_LOG}"
+echo "$(tput setaf 1)number of ${ERROR_PATTERN[0]} in redis.txt:"
+grep -c "${ERROR_PATTERN[0]}" "${LOG_DIR}/${REDIS_LOG}"
 echo "error lines in redis.txt:"
-grep "ERROR" "${LOG_DIR}/${REDIS_LOG}"
+grep "${ERROR_PATTERN[0]}" "${LOG_DIR}/${REDIS_LOG}"
 
-echo -e "\n$(tput setaf 3)number of warnings in redis.txt:"
-grep -c "WARN" "${LOG_DIR}/${REDIS_LOG}"
+echo -e "\n$(tput setaf 3)number of ${ERROR_PATTERN[1]} in redis.txt:"
+grep -c "${ERROR_PATTERN[1]}" "${LOG_DIR}/${REDIS_LOG}"
 echo "warning lines in redis.txt:"
-grep "WARN" "${LOG_DIR}/${REDIS_LOG}"
+grep "${ERROR_PATTERN[1]}" "${LOG_DIR}/${REDIS_LOG}"
 
-
-
+echo -e "$(tput setaf 7)\nLog analysis complete."
