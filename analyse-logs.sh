@@ -7,47 +7,28 @@ REDIS_LOG="redis.txt"
 
 ERROR_PATTERN=("ERROR" "WARN" "INFO")
 
-echo "analysing log files for errors and warnings"
+echo "analysing log files for ${ERROR_PATTERN[0]} and ${ERROR_PATTERN[1]} patterns"
 echo "---------------------------------------------"
 
 echo "Finding log files modified in the last 24 hours:"
 LOG_FILES=$(find "${LOG_DIR}" -name "*.txt" -mtime -1) #command substitution to find log files modified in the last 24 hours
 echo "$LOG_FILES"
 
-echo -e "\nAnalyzing app logs:"
+echo -e "\nAnalysing logs:"
 echo "-------------------"
-echo "$(tput setaf 1)number of ${ERROR_PATTERN[0]} in app.txt:"
-grep -c "${ERROR_PATTERN[0]}" "${LOG_DIR}/${APP_LOG}"
-echo "error lines in app.txt:"
-grep "${ERROR_PATTERN[0]}" "${LOG_DIR}/${APP_LOG}"
 
-echo -e "\n$(tput setaf 3)number of ${ERROR_PATTERN[1]} in app.txt:"
-grep -c "${ERROR_PATTERN[1]}" "${LOG_DIR}/${APP_LOG}"
-echo "warning lines in app.txt:"
-grep "${ERROR_PATTERN[1]}" "${LOG_DIR}/${APP_LOG}"
+for LOG_FILE in $LOG_FILES; do
+    echo -e "\n$(tput setaf 7)Processing ${LOG_FILE}..."
 
-echo -e "$(tput setaf 7)\nAnalyzing db logs:"
-echo "-------------------"
-echo "$(tput setaf 1)number of ${ERROR_PATTERN[0]} in db.txt:"
-grep -c "${ERROR_PATTERN[0]}" "${LOG_DIR}/${DB_LOG}"
-echo "error lines in db.txt:"
-grep "${ERROR_PATTERN[0]}" "${LOG_DIR}/${DB_LOG}"
+    echo "$(tput setaf 1)number of ${ERROR_PATTERN[0]} in ${LOG_FILE}:"
+    grep -c "${ERROR_PATTERN[0]}" "${LOG_FILE}"
+    echo "${ERROR_PATTERN[0]} lines in ${LOG_FILE}:"
+    grep "${ERROR_PATTERN[0]}" "${LOG_FILE}"
 
-echo -e "\n$(tput setaf 3)number of ${ERROR_PATTERN[1]} in db.txt:"
-grep -c "${ERROR_PATTERN[1]}" "${LOG_DIR}/${DB_LOG}"
-echo "warning lines in db.txt:"
-grep "${ERROR_PATTERN[1]}" "${LOG_DIR}/${DB_LOG}"
+    echo -e "\n$(tput setaf 3)number of ${ERROR_PATTERN[1]} in ${LOG_FILE}:"
+    grep -c "${ERROR_PATTERN[1]}" "${LOG_FILE}"
+    echo "${ERROR_PATTERN[1]} lines in ${LOG_FILE}:"
+    grep "${ERROR_PATTERN[1]}" "${LOG_FILE}"
 
-echo -e "$(tput setaf 7)\nAnalyzing redis logs:"
-echo "-------------------"
-echo "$(tput setaf 1)number of ${ERROR_PATTERN[0]} in redis.txt:"
-grep -c "${ERROR_PATTERN[0]}" "${LOG_DIR}/${REDIS_LOG}"
-echo "error lines in redis.txt:"
-grep "${ERROR_PATTERN[0]}" "${LOG_DIR}/${REDIS_LOG}"
-
-echo -e "\n$(tput setaf 3)number of ${ERROR_PATTERN[1]} in redis.txt:"
-grep -c "${ERROR_PATTERN[1]}" "${LOG_DIR}/${REDIS_LOG}"
-echo "warning lines in redis.txt:"
-grep "${ERROR_PATTERN[1]}" "${LOG_DIR}/${REDIS_LOG}"
-
+done
 echo -e "$(tput setaf 7)\nLog analysis complete."
