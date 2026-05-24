@@ -4,11 +4,13 @@ LOG_DIR="$(dirname "$0")/logs"
 ERROR_PATTERN=("FATAL" "CRITICAL" "ERROR" "WARN" "INFO")
 REPORT_FILE="$(date +' %Y-%m-%d')_log_report.txt"
 
-echo "Finding log files modified in the last 24 hours:"
-LOG_FILES=$(find "${LOG_DIR}" -name "*.txt" -mtime -1) #command substitution to find log files modified in the last 24 hours
-echo "$LOG_FILES"
+echo "Starting log analysis..."
 
-echo -e "\nAnalysing logs:" > "$REPORT_FILE"
+echo "Log files modified in the last 24 hours:" > "$REPORT_FILE"
+LOG_FILES=$(find "${LOG_DIR}" -name "*.txt" -mtime -1)  #command substitution to find log files modified in the last 24 hours
+echo "$LOG_FILES" >> "$REPORT_FILE"
+
+echo -e "\nAnalysing logs:" >> "$REPORT_FILE"
 echo "-------------------" >> "$REPORT_FILE"
 
 for LOG_FILE in $LOG_FILES; do
