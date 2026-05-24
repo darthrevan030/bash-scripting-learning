@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-LOG_DIR="./logs"
+LOG_DIR="$(dirname "$0")/logs"
 APP_LOG="app.txt"
 DB_LOG="db.txt"
 REDIS_LOG="redis.txt"
@@ -13,36 +13,36 @@ find "${LOG_DIR}" -name "*.txt" -mtime -1
 
 echo -e "\nAnalyzing app logs:"
 echo "-------------------"
-echo "number of errors in app.txt:"
+echo "$(tput setaf 1)number of errors in app.txt:"
 grep -c "ERROR" "${LOG_DIR}/${APP_LOG}"
 echo "error lines in app.txt:"
 grep "ERROR" "${LOG_DIR}/${APP_LOG}"
 
-echo -e "\nnumber of warnings in app.txt:"
+echo -e "\n$(tput setaf 3)number of warnings in app.txt:"
 grep -c "WARN" "${LOG_DIR}/${APP_LOG}"
 echo "warning lines in app.txt:"
 grep "WARN" "${LOG_DIR}/${APP_LOG}"
 
-echo -e "\nAnalyzing db logs:"
+echo -e "$(tput setaf 7)\nAnalyzing db logs:"
 echo "-------------------"
-echo -"number of errors in db.txt:"
+echo "$(tput setaf 1)number of errors in db.txt:"
 grep -c "ERROR" "${LOG_DIR}/${DB_LOG}"
-echo  "error lines in db.txt:"
+echo "error lines in db.txt:"
 grep "ERROR" "${LOG_DIR}/${DB_LOG}"
 
-echo -e "\nnumber of warnings in db.txt:"
+echo -e "\n$(tput setaf 3)number of warnings in db.txt:"
 grep -c "WARN" "${LOG_DIR}/${DB_LOG}"
 echo "warning lines in db.txt:"
 grep "WARN" "${LOG_DIR}/${DB_LOG}"
 
-echo -e "\nAnalyzing redis logs:"
+echo -e "$(tput setaf 7)\nAnalyzing redis logs:"
 echo "-------------------"
-echo "number of errors in redis.txt:"
+echo "$(tput setaf 1)number of errors in redis.txt:"
 grep -c "ERROR" "${LOG_DIR}/${REDIS_LOG}"
 echo "error lines in redis.txt:"
 grep "ERROR" "${LOG_DIR}/${REDIS_LOG}"
 
-echo -e "\nnumber of warnings in redis.txt:"
+echo -e "\n$(tput setaf 3)number of warnings in redis.txt:"
 grep -c "WARN" "${LOG_DIR}/${REDIS_LOG}"
 echo "warning lines in redis.txt:"
 grep "WARN" "${LOG_DIR}/${REDIS_LOG}"
