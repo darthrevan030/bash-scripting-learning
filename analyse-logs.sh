@@ -11,7 +11,8 @@ echo "analysing log files for errors and warnings"
 echo "---------------------------------------------"
 
 echo "Finding log files modified in the last 24 hours:"
-find "${LOG_DIR}" -name "*.txt" -mtime -1
+LOG_FILES=$(find "${LOG_DIR}" -name "*.txt" -mtime -1) #command substitution to find log files modified in the last 24 hours
+echo "$LOG_FILES"
 
 echo -e "\nAnalyzing app logs:"
 echo "-------------------"
