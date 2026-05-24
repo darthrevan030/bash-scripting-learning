@@ -6,8 +6,8 @@ Log files modified in the last 24 hours:
 Analysing logs:
 -------------------
 
-Number of 'ERROR' occurrences in ./logs/app.txt:
-35
+Processing ./logs/app.txt...
+35 [ERROR] occurrences in ./logs/app.txt:
 'ERROR' lines in ./logs/app.txt:
 2024-01-15 08:26:19 ERROR Database connection failed - Timeout after 30 seconds
 2024-01-15 08:26:25 ERROR Database connection failed - Timeout after 30 seconds
@@ -44,9 +44,7 @@ Number of 'ERROR' occurrences in ./logs/app.txt:
 2024-01-17 10:18:55 ERROR SMTP server connection failed - Host: smtp.mailserver.com:587, Error: connection timed out
 2024-01-17 10:21:33 ERROR S3 upload failed - Bucket: app-backups, Key: backup_20240117.tar.gz, Error: access denied
 2024-01-17 10:23:45 ERROR Dependency service timeout - Service: user-authentication-service, Timeout after: 3000ms
-
-Number of 'WARN' occurrences in ./logs/app.txt:
-13
+13 [WARN] occurrences in ./logs/app.txt:
 'WARN' lines in ./logs/app.txt:
 2024-01-15 08:26:20 WARN Retrying database connection - Attempt 1 of 3
 2024-01-15 08:26:26 WARN Retrying database connection - Attempt 2 of 3
@@ -61,9 +59,62 @@ Number of 'WARN' occurrences in ./logs/app.txt:
 2024-01-17 10:11:23 WARN High memory usage detected - Threshold exceeded: 70%
 2024-01-17 10:16:49 WARN Message buffered for retry - Buffer size: 1250 messages
 2024-01-17 10:19:20 WARN Email queue growing - Current size: 1847 pending emails
+51 [INFO] occurrences in ./logs/app.txt:
+'INFO' lines in ./logs/app.txt:
+2024-01-15 08:23:14 INFO Application started successfully
+2024-01-15 08:23:15 INFO Database connection pool initialized with 10 connections
+2024-01-15 08:23:16 INFO Server listening on port 3000
+2024-01-15 08:25:42 INFO User login successful - UserID: user_12345, IP: 192.168.1.100
+2024-01-15 08:26:18 INFO Processing payment request - OrderID: ORD-2024-001
+2024-01-15 08:26:31 INFO Database connection restored successfully
+2024-01-15 08:26:32 INFO Payment processed successfully - OrderID: ORD-2024-001
+2024-01-15 08:28:45 INFO API request received - Endpoint: /api/users/search
+2024-01-15 08:29:12 INFO User login successful - UserID: user_67890, IP: 10.0.2.45
+2024-01-15 08:30:55 INFO Cache hit - Key: user_profile_12345
+2024-01-15 08:32:10 INFO Backup process started
+2024-01-15 08:33:18 INFO User logout - UserID: user_12345
+2024-01-15 08:36:10 INFO Sending notification email to admin@example.com
+2024-01-15 08:37:25 INFO Scheduled job completed - Task: daily_reports
+2024-01-15 08:40:15 INFO Memory usage: 1.2GB / 4GB (30%)
+2024-01-15 08:41:30 INFO CPU usage: 45%
+2024-01-15 08:43:05 INFO Application health check passed
+2024-01-15 08:46:40 INFO Session cleanup completed - Removed 127 expired sessions
+2024-01-16 09:15:22 INFO Application startup initiated
+2024-01-16 09:15:23 INFO Loading configuration from /etc/app/config.yaml
+2024-01-16 09:15:24 INFO Connecting to Redis cache at redis.internal:6379
+2024-01-16 09:15:27 INFO HTTP server started on port 8080
+2024-01-16 09:17:35 INFO Incoming request - Method: GET, Path: /api/products/list
+2024-01-16 09:17:36 INFO Query executed successfully - Duration: 45ms
+2024-01-16 09:18:42 INFO User registration request - Email: john.doe@example.com
+2024-01-16 09:19:15 INFO Processing order - OrderID: ORD-2024-156
+2024-01-16 09:20:30 INFO Background job started - Job: inventory_sync
+2024-01-16 09:21:18 INFO API key validated - ClientID: client_abc123
+2024-01-16 09:22:50 INFO Session created - SessionID: sess_xyz789, UserID: user_54321
+2024-01-16 09:24:38 INFO Cache miss - Key: product_details_9876
+2024-01-16 09:26:22 INFO Webhook received - Source: github.com, Event: push
+2024-01-16 09:28:30 INFO Metrics exported - Endpoint: /metrics, Duration: 12ms
+2024-01-16 09:30:55 INFO Scheduled task completed - Task: cleanup_old_sessions, Removed: 234 items
+2024-01-16 09:32:20 INFO Request completed - Status: 200, Duration: 156ms
+2024-01-16 09:34:08 INFO User logout - UserID: user_54321, SessionDuration: 11m
+2024-01-17 10:05:18 INFO Service initialization complete
+2024-01-17 10:05:19 INFO Kubernetes health probe - Status: healthy
+2024-01-17 10:05:20 INFO Connecting to MongoDB cluster at mongodb.prod.svc:27017
+2024-01-17 10:05:27 INFO Service running in degraded mode - Write operations disabled
+2024-01-17 10:07:42 INFO Request received - Endpoint: /api/v2/bookings, Method: POST
+2024-01-17 10:08:15 INFO Background sync started - Source: external_calendar_api
+2024-01-17 10:09:30 INFO Processing webhook - Provider: stripe, Event: payment.succeeded
+2024-01-17 10:09:31 INFO Database read successful - Collection: transactions, Duration: 89ms
+2024-01-17 10:11:22 INFO Memory check - Used: 2.8GB, Available: 1.2GB, Total: 4GB
+2024-01-17 10:12:18 INFO Incoming gRPC call - Service: BookingService, Method: CreateReservation
+2024-01-17 10:13:05 INFO Session validation - SessionID: sess_abc456, Status: valid
+2024-01-17 10:15:12 INFO Metrics collection - CPU: 68%, Memory: 72%, Disk I/O: 245 MB/s
+2024-01-17 10:17:25 INFO Image upload request - Filename: hotel_room_205.jpg, Size: 4.2MB
+2024-01-17 10:18:40 INFO Cron job triggered - Task: send_reminder_emails
+2024-01-17 10:20:15 INFO API request throttled - Client: mobile_app_v2.1, Rate: 1500 req/min, Limit: 1000 req/min
+2024-01-17 10:22:10 INFO Cache refresh completed - Keys updated: 342, Duration: 1.8s
 
-Number of 'ERROR' occurrences in ./logs/db.txt:
-17
+Processing ./logs/db.txt...
+17 [ERROR] occurrences in ./logs/db.txt:
 'ERROR' lines in ./logs/db.txt:
 2024-01-19 12:10:15 ERROR Deadlock detected - Process 4567 and 4568 waiting for each other
 2024-01-19 12:10:16 ERROR Transaction rolled back - TxID: 987654, Reason: deadlock_detected
@@ -82,9 +133,7 @@ Number of 'ERROR' occurrences in ./logs/db.txt:
 2024-01-19 12:21:50 ERROR Lock timeout exceeded - Query waiting for lock on table: inventory, Timeout: 30s
 2024-01-19 12:26:15 ERROR Out of memory - Failed to allocate 256MB for query execution
 2024-01-19 12:26:16 ERROR Query terminated - Insufficient shared memory available
-
-Number of 'WARN' occurrences in ./logs/db.txt:
-6
+6 [WARN] occurrences in ./logs/db.txt:
 'WARN' lines in ./logs/db.txt:
 2024-01-19 12:09:22 WARN Slow query detected - Duration: 5432ms, Query: SELECT * FROM orders WHERE status = 'pending'
 2024-01-19 12:09:23 WARN Missing index on table: orders, Column: status
@@ -92,9 +141,29 @@ Number of 'WARN' occurrences in ./logs/db.txt:
 2024-01-19 12:13:36 WARN Standby database falling behind - Lag: 12 seconds
 2024-01-19 12:18:16 WARN Security alert - Multiple failed login attempts from IP: 203.45.67.89
 2024-01-19 12:22:35 WARN Table bloat detected - Table: sessions, Size: 4.5GB, Estimated bloat: 60%
+18 [INFO] occurrences in ./logs/db.txt:
+'INFO' lines in ./logs/db.txt:
+2024-01-19 12:05:15 INFO PostgreSQL database server v14.5 starting
+2024-01-19 12:05:16 INFO Database cluster initialized - Data directory: /var/lib/postgresql/data
+2024-01-19 12:05:17 INFO Listening for connections - Port: 5432
+2024-01-19 12:05:18 INFO Database system is ready to accept connections
+2024-01-19 12:05:19 INFO Recovering from last checkpoint - WAL location: 0/1A2B3C4D
+2024-01-19 12:05:20 INFO Recovery completed - Database restored to consistent state
+2024-01-19 12:07:30 INFO Connection received - User: app_user, Database: production, IP: 10.0.2.15
+2024-01-19 12:07:31 INFO Authentication successful - User: app_user
+2024-01-19 12:08:45 INFO Query executed - Duration: 145ms, Rows: 1234
+2024-01-19 12:11:30 INFO Vacuum process started - Table: customer_data
+2024-01-19 12:11:45 INFO Vacuum completed - Dead tuples removed: 45678, Duration: 15s
+2024-01-19 12:13:35 INFO Replication lag detected - Primary ahead by 234 transactions
+2024-01-19 12:15:10 INFO Emergency cleanup initiated - Removing old WAL files
+2024-01-19 12:17:40 INFO Connection terminated - User: app_user, Duration: 10m15s
+2024-01-19 12:19:30 INFO Backup initiated - Method: pg_basebackup, Destination: /backups/daily
+2024-01-19 12:20:22 INFO Auto-vacuum launched - Table: order_items, Threshold exceeded
+2024-01-19 12:23:10 INFO Streaming replication connected - Standby: db-replica-02, Lag: 0 bytes
+2024-01-19 12:25:20 INFO Statistics updated - Table: products, Analyze duration: 2.3s
 
-Number of 'ERROR' occurrences in ./logs/redis.txt:
-7
+Processing ./logs/redis.txt...
+7 [ERROR] occurrences in ./logs/redis.txt:
 'ERROR' lines in ./logs/redis.txt:
 2024-01-18 11:19:43 ERROR Connection to master failed - Timeout after 5000ms
 2024-01-18 11:21:30 ERROR AOF write failed - Path: /data/appendonly.aof, Error: disk full
@@ -103,9 +172,7 @@ Number of 'ERROR' occurrences in ./logs/redis.txt:
 2024-01-18 11:26:30 ERROR Cluster failover initiated - Master node unreachable: redis-master-01
 2024-01-18 11:28:05 ERROR Authentication failed - Invalid password from IP: 203.45.89.12
 2024-01-18 11:31:15 ERROR Replication lag critical - Master offset: 1234567, Replica offset: 1200000, Lag: 34567 bytes
-
-Number of 'WARN' occurrences in ./logs/redis.txt:
-6
+6 [WARN] occurrences in ./logs/redis.txt:
 'WARN' lines in ./logs/redis.txt:
 2024-01-18 11:18:55 WARN Memory usage high - Used: 3.2GB, Max: 4GB (80% threshold exceeded)
 2024-01-18 11:19:44 WARN Replica disconnected from master - Retrying in 10s
@@ -113,3 +180,34 @@ Number of 'WARN' occurrences in ./logs/redis.txt:
 2024-01-18 11:22:11 WARN Performance degradation - Blocking operation on main thread
 2024-01-18 11:24:21 WARN Rejecting new connections - Connection limit exceeded
 2024-01-18 11:28:06 WARN Potential security threat - Multiple failed auth attempts detected
+24 [INFO] occurrences in ./logs/redis.txt:
+'INFO' lines in ./logs/redis.txt:
+2024-01-18 11:15:30 INFO Redis server v7.2.3 starting
+2024-01-18 11:15:31 INFO Running in standalone mode
+2024-01-18 11:15:32 INFO Server initialized - Port: 6379, PID: 1234
+2024-01-18 11:15:33 INFO Ready to accept connections
+2024-01-18 11:15:34 INFO Loading RDB snapshot from disk - File: dump.rdb
+2024-01-18 11:15:35 INFO Database loaded from disk - Keys: 15234, Duration: 1.2s
+2024-01-18 11:17:45 INFO Client connected - IP: 10.0.1.45:52341
+2024-01-18 11:17:46 INFO Command executed - SET user:profile:12345, Duration: 0.8ms
+2024-01-18 11:18:22 INFO Cache hit - Key: session:user_98765, TTL: 3420s
+2024-01-18 11:19:10 INFO Eviction policy triggered - Policy: allkeys-lru, Keys evicted: 245
+2024-01-18 11:19:42 INFO Replication sync started - Master: redis-master.prod:6379
+2024-01-18 11:19:54 INFO Connection to master re-established successfully
+2024-01-18 11:20:15 INFO Full resync requested by master - RDB transfer started
+2024-01-18 11:20:48 INFO Background save started - Fork: success, PID: 1567
+2024-01-18 11:21:05 INFO RDB snapshot saved - File: dump.rdb, Size: 512MB, Duration: 17s
+2024-01-18 11:22:10 INFO Slow query detected - Command: KEYS *, Duration: 1234ms
+2024-01-18 11:23:45 INFO Client disconnected - IP: 10.0.1.45:52341, Duration: 6m
+2024-01-18 11:25:15 INFO Cluster node status check - Node: redis-node-02, Status: connected
+2024-01-18 11:26:31 INFO Promoting replica to master - Node: redis-replica-02
+2024-01-18 11:26:32 INFO Cluster topology updated - New master elected
+2024-01-18 11:27:18 INFO Command executed - MGET 1000 keys, Duration: 45ms
+2024-01-18 11:29:40 INFO Pub/Sub message published - Channel: notifications, Subscribers: 1247
+2024-01-18 11:30:22 INFO Expired keys cleanup - Keys removed: 3421, Duration: 89ms
+2024-01-18 11:32:50 INFO Configuration reloaded - Changes applied without restart
+
+Summary of total occurrences across all logs:
+Total 'ERROR' occurrences across all logs: 59
+Total 'WARN' occurrences across all logs: 25
+Total 'INFO' occurrences across all logs: 93
